@@ -10,4 +10,4 @@ function serieDeFourier(func, T, armonico)
 	hold on     
 	grid on     
 	ezplot(f)
-end	
+end
