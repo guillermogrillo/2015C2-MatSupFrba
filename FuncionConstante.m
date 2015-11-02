@@ -5,7 +5,7 @@ function [ y ] = FuncionConstante( t, const )
         const = 1;
     end
     
-    y = const
+    y = const + t * 0; % multiplicamos t * 0 para quitar el warning y que no modifique la funcion
     
 end
 
