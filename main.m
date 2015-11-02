@@ -4,18 +4,18 @@
 |==================================================
 %}
 
-% T = 2;
-% syms t;
-% func = 
-% armonico = 5;
-
+ T = 4;
+ syms t;
+ func = FuncionConstante(t,T);
+ armonico = 5;
+ serieDeFourier(func,T,armonico);
 %{
 |==================================================
 | Ejecucion (no modificar al testear)
 |==================================================
 %}
 
-clear;
-clc;
+%clear;
+%clc;
 
-% serieDeFourier(T,func,armonico);
+
