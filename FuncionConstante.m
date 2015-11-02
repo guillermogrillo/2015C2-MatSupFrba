@@ -1,11 +1,11 @@
-function [ y ] = FuncionConstante( t, const )
+function [ y ] = FuncionConstante( t, T, const)
 
     % Chequea cantidad de parametros y completa con defaults
-    if (nargin == 1)
+    if (nargin == 2)
         const = 1;
     end
     
-    y = const + t * 0; % multiplicamos t * 0 para quitar el warning y que no modifique la funcion
+    y = const * (t>0 & t<T/2); 
     
 end
 
