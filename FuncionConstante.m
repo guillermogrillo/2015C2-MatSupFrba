@@ -5,7 +5,7 @@ function [ y ] = FuncionConstante( t, T, const)
         const = 1;
     end
     
-    y = const * ( heaviside(t) - heaviside(t-T/2) );%* (t>0 & t<T/2); 
+    y = const * ( heaviside(t) - heaviside(t-T/2) );
     
 end
 

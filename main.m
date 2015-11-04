@@ -6,8 +6,8 @@
 
  T = 4;
  syms t;
- func = FuncionConstante(t,T);
- armonico = 5;
+ func = FuncionModulo(t,T);
+ armonico = 15;
  serieDeFourier(func,T,armonico);
 %{
 |==================================================
