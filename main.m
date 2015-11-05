@@ -4,18 +4,25 @@
 |==================================================
 %}
 
- T = 4;
- syms t;
- func = FuncionModulo(t,T);
- armonico = 15;
- serieDeFourier(func,T,armonico);
+clear;
+clc;
+syms t;
+
+% periodo de la funcion
+T = 4;
+
+% funcion elegida
+func = FuncionModulo(t,T);
+
+% cantidad de armonicas
+armonico = 15;
+
 %{
 |==================================================
 | Ejecucion (no modificar al testear)
 |==================================================
 %}
 
-%clear;
-%clc;
+serieDeFourier(func,T,armonico);
 
 
