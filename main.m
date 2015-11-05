@@ -9,20 +9,22 @@ clc;
 syms t;
 
 % periodo de la funcion
-T = 4;
+T = 2;
 
 % funcion elegida
-func = FuncionModulo(t,T);
+func = FuncionConstante(t,T);
 
 % cantidad de armonicas
-armonico = 15;
+armonico = 5;
 
 %{
 |==================================================
 | Ejecucion (no modificar al testear)
 |==================================================
 %}
-
-serieDeFourier(func,T,armonico);
+%3er parametro: '0' para recta
+%               '1' para modulo
+%                indistinto para constante
+serieDeFourier(func,T,1,armonico);
 
 

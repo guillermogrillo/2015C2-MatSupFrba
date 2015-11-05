@@ -1,10 +1,12 @@
-function serieDeFourier(func, T, armonico)     
+function serieDeFourier(func, T, offset, armonico)     
 	syms t;     
-	w = 2*pi/T;     
+	w = 2*pi/T; 
+    a = 0 - offset * T/2;
+    b = T - offset * T/2;
 	n = 1:armonico;     
-	a0 = (2/T)*int(func,t, -T/2, T/2);     
-	an = (2/T)*int(func*cos(n*w*t),t, -T/2, T/2);     
-	bn = (2/T)*int(func*sin(n*w*t),t, -T/2, T/2);     
+	a0 = (2/T)*int(func,t, a, b);     
+	an = (2/T)*int(func*cos(n*w*t),t, a, b);     
+	bn = (2/T)*int(func*sin(n*w*t),t, a, b);     
 	f = a0/2 + dot(an,cos(n*w*t)) + dot (bn, sin(n*w*t));     
 	ezplot(func,[-2*T,2*T])     
 	hold on     
