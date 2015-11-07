@@ -6,25 +6,32 @@
 
 clear;
 clc;
+
+%declaro var. independiente
 syms t;
 
-% periodo de la funcion
-T = 2;
+% elegir periodo de la funcion
+T = 4;
 
-% funcion elegida
+% elegir modelo, entre opciones:
+% FuncionConstante(t, T, const) -> f(t) = const si (0<t<T/2) , 0 si (T/2<t<T) ; offset = 0
+% FuncionRecta(t, T, a, b) -> f(t) = a*x + b si (0<t<T) ; offset = 0
+% FuncionModulo(t, T, a, b) -> f(t) = -(a*x + b) si (-T/2<t<0) , a*x + b si (0<t<T/2) ; offset = 1
 func = FuncionConstante(t,T);
+offset = 0;
 
-% cantidad de armonicas
-armonico = 5;
+% cantidad de armonicas a representar
+armonico = 7;
+
 
 %{
 |==================================================
 | Ejecucion (no modificar al testear)
 |==================================================
 %}
-%3er parametro: '0' para recta
-%               '1' para modulo
-%                indistinto para constante
-serieDeFourier(func,T,1,armonico);
+
+serieDeFourier(func,T,offset,armonico);
+
+
 
 
